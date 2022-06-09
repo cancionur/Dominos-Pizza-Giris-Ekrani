@@ -10,6 +10,6 @@ https://youtu.be/inTczhx9ybs
 
 <p float="left">
   <img src="/pictures/pic1.png" width="300" />
-  <img src="/pictures/pic2.jpg" width="200" /> 
-  <img src="/pictures/pic3.jpg" width="200" />
+  <img src="/pictures/pic2.jpg" width="225" /> 
+  <img src="/pictures/pic3.jpg" width="225" />
 </p>
