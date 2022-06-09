@@ -1,16 +1,15 @@
-# dominos_demo_uygulama
+# Açıklama 
 
-A new Flutter project.
+Dominos Pizza uygulamasının giriş ekranını Flutter üzerinde geliştirdim. Kategorileri sıralamak için Lisview.builder yapısından faydalandım. Yıldız bırakırsanız sevinirim.
 
-## Getting Started
+# Uygulama Videosu
 
-This project is a starting point for a Flutter application.
+https://youtu.be/inTczhx9ybs
 
-A few resources to get you started if this is your first Flutter project:
+# Uygulama içi Görseller
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p float="left">
+  <img src="/pictures/pic1.png" width="350" />
+  <img src="/pictures/pic2.jpg" width="300" /> 
+  <img src="/pictures/pic3.jpg" width="300" />
+</p>
