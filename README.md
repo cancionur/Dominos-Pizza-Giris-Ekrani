@@ -9,7 +9,7 @@ https://youtu.be/inTczhx9ybs
 # Uygulama içi Görseller
 
 <p float="left">
-  <img src="/pictures/pic1.png" width="300" />
-  <img src="/pictures/pic2.jpg" width="225" /> 
-  <img src="/pictures/pic3.jpg" width="225" />
+  <img src="/pictures/r1.jpg" width="225" />
+  <img src="/pictures/r2.jpg" width="225" /> 
+  <img src="/pictures/r3.jpg" width="225" />
 </p>
