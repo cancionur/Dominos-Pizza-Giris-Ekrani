@@ -32,9 +32,9 @@ class _AnaSayfaState extends State<AnaSayfa> {
 
           actions: [
             Image.asset("pictures/ev_resim_ikon.png"),
-            IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_arrow_down)),
-            Padding(
-              padding: const EdgeInsets.only(top: 20.0),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.keyboard_arrow_down)),
+            const Padding(
+              padding: EdgeInsets.only(top: 20.0),
               child: Text("Isparta"),
             ),
             Padding(
@@ -45,7 +45,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
             SizedBox(width: 40,child: Image.asset("pictures/zil_ikon.png")),
             SizedBox(width: 40, child: Container()),
             SizedBox(width: 40, child: Image.asset("pictures/alisveris_ikon.png")),
-            Icon(Icons.dehaze, color: Colors.blue),
+            const Icon(Icons.dehaze, color: Colors.blue),
             SizedBox(width: 10, child: Container()),
 
           ],
@@ -53,18 +53,18 @@ class _AnaSayfaState extends State<AnaSayfa> {
         ),
 
         body: NestedScrollView(
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           headerSliverBuilder: (context, isScrolled){
             return[
-              SliverAppBar(
-                backgroundColor: const Color(0xFF20242d),
+              const SliverAppBar(
+                backgroundColor: Color(0xFF20242d),
                 collapsedHeight: 500,
                 expandedHeight: 250,
                 flexibleSpace: ProfileView(),
               ),
               SliverPersistentHeader(
                   delegate: MyDelatege(
-                    TabBar(
+                    const TabBar(
                       isScrollable: true,
                       tabs: [
                         SizedBox(width: 100,child: Tab(text: "Önerilenler",)),
@@ -80,7 +80,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
                 pinned: false,
               )
             ];
-          }, body: TabBarView(children:[
+          }, body: const TabBarView(children:[
             Onerilenler(),
             GelAlHaftaninKampanyalari(),
             GelAlTekKisilik(),
