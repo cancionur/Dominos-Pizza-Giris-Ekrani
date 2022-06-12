@@ -38,76 +38,85 @@ class _GelAlDortKisilikState extends State<GelAlDortKisilik> {
             if (snapshot.hasData) {
               var menulerListesi = snapshot.data;
 
-              return ListView.builder(
+              return Container(color: Color(0xFF20242d),
+                child: ListView.builder(
+                  //separatorBuilder: (context,index) => Divider(color: Color(0xFF20242d) ,),
 
-                  itemCount: menulerListesi!.length,
-                  itemBuilder: (context,indeks){
-                    return Container(color: Color(0xFF20242d),
-                      child: Card(
-                        child: SizedBox(height: 150,
-                          child: Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: Container(color: Color(0xFF20242d),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    child: Column(mainAxisAlignment: MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(16.0),
-                                          child: Image.asset("onerilenler_pictures/${menulerListesi[indeks].menu_resim_ad}",width: 100,height: 100,),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-
-                                  Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    itemCount: menulerListesi!.length,
+                    itemBuilder: (context,indeks){
+                      return Container(color: Color(0xFF20242d),
+                        child: Card(
+                          child: Container(color: Color(0xFF20242d),
+                            child: Row(
+                              children: [
+                                Container(
+                                  child: Column(
                                     children: [
-                                      Row(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.only(top: 10.0),
-                                            child: Text("${menulerListesi[indeks].menu_ad}",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey,fontSize: 18),),
-                                          )
-                                        ],
-
-                                      ),
-                                      Row(
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Text("${menulerListesi[indeks].menu_fiyat} TL",style: TextStyle(color: Color(0xFFcc8f15),fontWeight: FontWeight.bold,fontSize: 20),),
-                                              Text("'den başlayan\n fiyatlarla",style: TextStyle(color:Color(0xFFcc8f15), ),)
-                                            ],
-                                          ),
-
-                                          Container(width: 80,),
-                                          Padding(
-                                            padding: const EdgeInsets.only(bottom: 16.0),
-                                            child: Container(width: 75,height: 30,
-                                                decoration:  BoxDecoration(
-                                                  border: Border.all(color: Color(0xFF7393F6), width: 2.0),
-                                                  borderRadius: const BorderRadius.all(Radius.elliptical(20, 20)),),
-                                                child: Column(mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: [
-                                                    Text("Sipariş ver",style: TextStyle(color: Color(0xFF7393F6)),),
-                                                  ],
-                                                )),
-                                          )
-                                        ],
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 16,top: 16),
+                                        child: Image.asset("onerilenler_pictures/${menulerListesi[indeks].menu_resim_ad}",width: 100,height: 100,),
                                       ),
                                     ],
-
                                   ),
-                                ],
-                              ),
+                                ),
+
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 12.0),
+                                    child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      //crossAxisAlignment: CrossAxisAlignment.stretch,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(top: 10.0),
+                                              child: Text("${menulerListesi[indeks].menu_ad}",style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey,fontSize: 18),),
+                                            )
+                                          ],
+
+                                        ),
+                                        Container(height: 30,),
+                                        //Spacer(),
+                                        Padding(
+                                          padding: const EdgeInsets.only(bottom: 8.0),
+                                          child: Row(mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Column(
+                                                children: [
+                                                  Text("${menulerListesi[indeks].menu_fiyat} TL",style: TextStyle(color: Color(0xFFcc8f15),fontWeight: FontWeight.bold,fontSize: 20),),
+                                                  Text("'den başlayan\n fiyatlarla",style: TextStyle(color:Color(0xFFcc8f15), ),)
+                                                ],
+                                              ),
+
+                                              Padding(
+                                                padding: const EdgeInsets.only(bottom: 16.0),
+                                                child: Container(width: 75,height: 30,
+                                                    decoration:  BoxDecoration(
+                                                      border: Border.all(color: Color(0xFF7393F6), width: 2.0),
+                                                      borderRadius: const BorderRadius.all(Radius.elliptical(20, 20)),),
+                                                    child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                                                      children: [
+                                                        Text("Sipariş ver",style: TextStyle(color: Color(0xFF7393F6)),),
+                                                      ],
+                                                    )),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                      ),
-                    );
-                  }
+                      );
+                    }
 
+                ),
               );
             }
             else {
